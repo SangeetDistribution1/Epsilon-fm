@@ -1,0 +1,51 @@
+[tool.poetry]
+name = "Epsilon Management System API"
+version = "0.0.4"
+description = "A modern open-source music distribution platform."
+authors = ["Nathaniel Houk <nate@epsilonrecords.com>"]
+license = "MIT"
+readme = "README.md"
+packages = [{ include = "src" }]
+
+[tool.poetry.dependencies]
+alembic = "^1.13.2"
+arq = "^0.25.0"
+asyncpg = "^0.29.0"
+bcrypt = "^4.2.0"
+fastapi = {extras = ["all"], version = "^0.111.1"}
+fastapi-async-sqlalchemy = "^0.6.1"
+gunicorn = "^22.0.0"
+pytest = "^8.3.2"
+pydantic-settings = "^2.4.0"
+pyjwt = { extras = ["crypto"], version = "^2.8.0" }
+python = ">=3.12,<3.13"
+python-jose = "^3.3.0"
+redis = "^5.0.7"
+types-redis = "^4.6.0.20240726"
+SQLAlchemy = "^2.0.31"
+SQLAlchemy-Utils = "^0.41.1"
+sqlmodel = "^0.0.21"
+uvicorn = "^0.27.0"
+uvloop = { version = "^0.19.0", markers = "sys_platform == 'linux'" }
+psutil = "^6.0.0"
+greenlet = "^3.0.3"
+pyyaml = "^6.0.1"
+pre-commit = "^3.8.0"
+ruff = "^0.5.6"
+readme-metrics = "^3.1.0"
+pathspec = "^0.12.1"
+fastcrud = "^0.14.0"
+starlette-admin = "^0.14.1"
+mypy = "^1.11.0"
+aider-chat = "^0.48.1"
+
+[tool.poetry.group.dev.dependencies]
+pre-commit = "^3.8.0"
+mypy = "^1.11.0"
+
+[tool.black]
+line-length = 100
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
